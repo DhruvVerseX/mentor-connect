@@ -32,7 +32,7 @@ export default function Home() {
         <SuccessStories fadeInUp={fadeInUp} staggerChildren={staggerChildren}/>
       </MaxWidthWrapper>
       <MentorProfiles fadeInUp={fadeInUp} staggerChildren={staggerChildren}/>
-      <WhyChooseUs />
+      <WhyChooseUs fadeInUp={fadeInUp} staggerChildren={staggerChildren}/>
       <JoinMentorConnect fadeInUp={fadeInUp} staggerChildren={staggerChildren}/>
       <Testimonials fadeInUp={fadeInUp} staggerChildren={staggerChildren}/>
       <FAQSection fadeInUp={fadeInUp} staggerChildren={staggerChildren}/>

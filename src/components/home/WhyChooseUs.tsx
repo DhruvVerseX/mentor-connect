@@ -1,27 +1,24 @@
 "use client"
 import React from 'react';
-import { motion } from 'framer-motion';
+import { motion, Variants } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { Award, ChevronDown, Clock10, Users } from 'lucide-react';
+import { Award, Clock10, Users } from 'lucide-react';
 import MaxWidthWrapper from '../wrapper/MaxWidthWrapper';
 
-function WhyChooseUs() {
+interface WhyChooseUsProps {
+    fadeInUp: Variants;
+    staggerChildren: Variants;
+}
+
+
+function WhyChooseUs(
+    { fadeInUp, staggerChildren }: WhyChooseUsProps
+) {
     // Initialize Intersection Observer
     const { ref, inView } = useInView({
-        triggerOnce: true, // Animate only once
-        threshold: 0.5,    // Trigger when 20% of the section is visible
+        triggerOnce: true, 
+        threshold: 0.8,
     });
-
-    // Animation variants
-    const fadeInUp = {
-        hidden: { opacity: 0, y: 20 },
-        visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
-    };
-
-    const staggerChildren = {
-        hidden: { opacity: 0 },
-        visible: { opacity: 1, transition: { staggerChildren: 0.2 } },
-    };
 
     return (
         <section id="whyChooseUs" className="py-20 bg-white" ref={ref}>
