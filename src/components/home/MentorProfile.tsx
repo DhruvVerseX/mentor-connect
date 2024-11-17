@@ -17,7 +17,7 @@ function MentorProfiles(
 ) {
     const { ref, inView } = useInView({
         triggerOnce: true, 
-        threshold: 0.8,    
+        threshold: 0.5,    
     });
 
    
