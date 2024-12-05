@@ -39,10 +39,10 @@ const HowItWorks = ({fadeInUp, staggerChildren}: HowItWorksProps) => {
                     className="grid grid-cols-1 md:grid-cols-4 gap-8"
                 >
                     {[
-                        { title: "Create Profile", icon: Users },
-                        { title: "Find Mentor", icon: MailCheckIcon },
-                        { title: "Book a Session", icon: BookOpen },
-                        { title: "Start Learning", icon: Target },
+                        { title: "Create Profile", icon: Users , description: "Create a profile to get started." },
+                        { title: "Find Mentor", icon: MailCheckIcon, description: "Find a mentor that suits your needs." },
+                        { title: "Book a Session", icon: BookOpen, description: "Book a session with your mentor." },
+                        { title: "Start Learning", icon: Target, description: "Start learning and growing." },
                     ].map((step, index) => (
                         <motion.div key={index} variants={fadeInUp} className="text-center">
                             <div className="bg-gradient-to-br from-purple-100 to-pink-100 rounded-full p-6 inline-block mb-4 shadow-lg">
@@ -50,7 +50,7 @@ const HowItWorks = ({fadeInUp, staggerChildren}: HowItWorksProps) => {
                             </div>
                             <h3 className="text-xl font-semibold mb-2">{step.title}</h3>
                             <p className="text-gray-600">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                {step.description}
                             </p>
                         </motion.div>
                     ))}
