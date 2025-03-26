@@ -29,7 +29,7 @@ function Hero({ fadeInUp, staggerChildren }: HeroProps) {
                         <motion.h1
                             variants={fadeInUp}
                             className="text-4xl md:text-6xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-pink-600"
-                        >
+                            >
                             Connect with Mentors to Grow Your Career
                         </motion.h1>
 
